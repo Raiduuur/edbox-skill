@@ -1,6 +1,6 @@
-# Gearbox
+# Edbox
 
-An agent skill that tells coding agents **which model and effort should carry
+A gearbox for AI models: an agent skill that tells coding agents **which model and effort should carry
 a piece of work**, and when to change gear between Claude Opus 5.5 and Claude
 Fable 5.2, with Sol 6.1 as the reviewer.
 
@@ -8,7 +8,7 @@ Works with Claude Code, Codex, and other agents that support
 [Agent Skills](https://skills.sh).
 
 ```bash
-npx skills add Raiduuur/gearbox-skill
+npx skills add Raiduuur/edbox-skill
 ```
 
 ## The idea
@@ -47,7 +47,7 @@ rewards reading everything first, when a high-risk change must be perfect, or
 when Fable's answer missed.
 
 The full rules, including the exact prompts to use for each shift, are in
-[`skills/gearbox/SKILL.md`](skills/gearbox/SKILL.md).
+[`skills/edbox/SKILL.md`](skills/edbox/SKILL.md).
 
 ## How it works
 
@@ -57,7 +57,7 @@ subagent, when work is going in circles, or when its options are weak. It
 decides, says in one line which gear it took and why, and asks you first when
 the call is close or would spend a lot of Fable.
 
-**By hand.** Type `/gearbox`, or say "gearbox" or "which gear" in a message.
+**By hand.** Type `/edbox`, or say "edbox", "gearbox" or "which gear" in a message.
 
 **How an agent actually shifts:**
 
@@ -74,16 +74,16 @@ the call is close or would spend a lot of Fable.
 With the skills CLI:
 
 ```bash
-npx skills add Raiduuur/gearbox-skill
+npx skills add Raiduuur/edbox-skill
 ```
 
 Or by hand:
 
 ```bash
-git clone https://github.com/Raiduuur/gearbox-skill.git
+git clone https://github.com/Raiduuur/edbox-skill.git
 mkdir -p ~/.agents/skills ~/.claude/skills
-cp -r gearbox-skill/skills/gearbox ~/.agents/skills/gearbox      # Codex and others
-ln -s ~/.agents/skills/gearbox ~/.claude/skills/gearbox          # Claude Code
+cp -r edbox-skill/skills/edbox ~/.agents/skills/edbox      # Codex and others
+ln -s ~/.agents/skills/edbox ~/.claude/skills/edbox          # Claude Code
 ```
 
 ### Optional: make it stick
@@ -93,7 +93,7 @@ of every session, add this line to your global `~/.claude/CLAUDE.md` and
 `~/.codex/AGENTS.md`:
 
 ```markdown
-- Gearbox (model choice): Opus 5.5 `high` drives all work by default. Shift to Fable 5.2 `high` for unprovable or creative calls, weak options, and work that circles without landing; hand the building and verifying back to Opus. Sol 6.1 `high` reviews the work of both, and takes other work when the main coding agent decides it helps. Before picking a model or effort for a subagent or delegate, read the `gearbox` skill.
+- Edbox (gearbox, model choice): Opus 5.5 `high` drives all work by default. Shift to Fable 5.2 `high` for unprovable or creative calls, weak options, and work that circles without landing; hand the building and verifying back to Opus. Sol 6.1 `high` reviews the work of both, and takes other work when the main coding agent decides it helps. Before picking a model or effort for a subagent or delegate, read the `edbox` skill.
 ```
 
 ## Notes

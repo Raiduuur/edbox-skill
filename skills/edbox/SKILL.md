@@ -1,9 +1,11 @@
 ---
-name: gearbox
-description: Gearbox — which model and effort carries a piece of work (Opus 5.5, Fable 5.2, Sol 6.1, Haiku 5.5). Use when picking a model or effort for a subagent or delegate, when work circles without landing, when the options on the table are all weak, or when the user says "gearbox", "gear", or "which model".
+name: edbox
+description: Edbox, the gearbox — which model and effort carries a piece of work (Opus 5.5, Fable 5.2, Sol 6.1, Haiku 5.5). Use when picking a model or effort for a subagent or delegate, when work circles without landing, when the options on the table are all weak, or when the user says "edbox", "gearbox", "gear", or "which model".
 ---
 
-# Gearbox
+# Edbox
+
+Edbox is the gearbox for models.
 
 Opus 5.5 drives. Fable 5.2 is the shift. You shift for **temperament**, not
 for speed or raw power: both run at about 110 tokens/s, and Opus completes
